@@ -2,6 +2,8 @@ require "capybara"
 require "capybara/rspec"
 require "rspec"
 
+set :database, "sqlite3:fireworksbnb_test.sqlite3"
+
 require File.join(File.dirname(__FILE__), "../app/app")
 
 # ENV["ENVIRONMENT"] = "test"
