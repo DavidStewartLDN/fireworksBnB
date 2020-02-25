@@ -5,7 +5,7 @@ require_relative "./models/booking"
 require_relative "./models/space"
 require_relative "./models/user"
 
-set :database, "sqlite3:fireworksbnb.sqlite3"
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'fireworksbnb')
 
 class FireworksBnB < Sinatra::Base
   get "/" do

@@ -5,8 +5,8 @@ default: &default
 
 development:
   <<: *default
-  database: fireworksbnb
+  database: db/fireworksbnb.sqlite3
 
 test:
   <<: *default
-  database: fireworksbnb_test
+  database: db/fireworksbnb_test.sqlite3
