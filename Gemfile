@@ -6,6 +6,7 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'sqlite3'
 gem 'rake'
+gem 'rack'
 
 gem 'rspec'
 gem 'capybara'
