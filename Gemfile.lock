@@ -107,6 +107,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   capybara
+  rack
   rake
   rspec
   rubocop
