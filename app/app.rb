@@ -35,6 +35,7 @@ class FireworksBnB < Sinatra::Base
   post '/login/validate' do
     session[:user_entered] = params["username"]
     session[:password_entered] = params["password"]
+    new_user = User.create(username: params[:new_user_name], password: params[:new_password])
     erb :login
     # redirect '/list_all'
   end
@@ -75,7 +76,7 @@ class FireworksBnB < Sinatra::Base
   # end
 
   # post '/add_user/new' do
-  #   new_user = User.create(username: params[:new_user_name], password: params[:new_password])
+   
   #   redirect '/list_all'
   # end  
 end
