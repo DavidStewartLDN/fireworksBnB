@@ -24,9 +24,9 @@ class FireworksBnB < Sinatra::Base
 
   # # login to users account
 
-  # get '/login' do
-  #   erb :login
-  # end
+  get '/login' do
+    erb :login
+  end
 
   # # Verify login details against database
 
