@@ -28,21 +28,39 @@ class FireworksBnB < Sinatra::Base
     erb :index
   end
 
-  # # login to users account
+  # User sign up and creating accoutn details pages
+
+  get '/sign_up' do
+    erb :sign_up
+  end
+
+  post '/add_user/new' do
+    new_user = User.create(username: params["new_user_name"], password: params["new_password"])
+    redirect '/login'
+  end
+
+  # login to users account
 
   get '/login' do
     erb :login
   end
 
-  post '/add_user/new' do
-    session[:user] = params["new_user_name"]
-    session[:password] = params["new_password"]
-    new_user = User.create(username: params["new_user_name"], password: params["new_password"])
-    redirect '/login'
+  # validates entered username against database
+
+  post '/login/validate' do
+    if (User.exists?(username: params["username"], password: params["password"]))
+      session[:user_id] = User.find_by(username: params["username"]).id
+      session[:user] = params["username"]
+      redirect '/homepage'
+    else
+      redirect '/login'
+    end
   end
 
-  get '/sign_up' do
-    erb :sign_up
+  # Main homepage of logged in user
+
+  get '/homepage' do
+    erb :homepage
   end
 
 end
