@@ -5,7 +5,7 @@ require_relative "./models/booking"
 require_relative "./models/space"
 require_relative "./models/user"
 
-set :database, "sqlite3:fireworksbnb.sqlite3"
+
 enable :sessions
 
 class FireworksBnB < Sinatra::Base
