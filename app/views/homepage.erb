@@ -1,3 +1,12 @@
- <div>
+<div>
  	<h1>Welcome to FireworksBnB</h1>
+   <a id="button" href="/add_space">List a Space</a>
+   <div>
+    <h1> Space feed! </h1>
+    <ul>
+      <% @spaces.each do |space| %>
+        <li>Property name: <%= space.property_name %> Description: <%= space.description %> Price: <%= space.price %> </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

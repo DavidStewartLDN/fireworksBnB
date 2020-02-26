@@ -60,7 +60,19 @@ class FireworksBnB < Sinatra::Base
   # Main homepage of logged in user
 
   get '/homepage' do
+    @spaces = Space.all
     erb :homepage
   end
+
+  # Add a new space
+
+   get '/add_space' do
+    erb :add_space
+  end
+
+  post '/add_space/new' do
+    new_space = Space.create(property_name: params[:new_space_name], description: params[:new_space_description], price: params[:new_price])
+    redirect '/homepage'
+  end 
 
 end

@@ -11,7 +11,3 @@ feature 'user is able to log in' do
     expect(page).to have_content('Welcome to FireworksBnB')
   end
 end
-
-
-
-# new_user = User.create(username: "Mark", password: "Mark123")
