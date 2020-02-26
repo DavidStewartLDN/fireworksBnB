@@ -10,9 +10,9 @@ ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'fireworks
 class FireworksBnB < Sinatra::Base
   # get "/" do
   #   # this is how you bring in database models. this returns all lines in each table for each class and saves it as an instance variable
-  #   @users = User.all
-  #   @spaces = Space.all
-  #   @bookings = Booking.all
+    @users = User.all
+    @spaces = Space.all
+    @bookings = Booking.all
   #   erb :list_all
   # end
 
@@ -30,6 +30,13 @@ class FireworksBnB < Sinatra::Base
 
   get '/sign_up' do
     erb :sign_up
+  end
+
+  post '/login/validate' do
+    session[:user_entered] = params["username"]
+    session[:password_entered] = params["password"]
+    erb :login
+    # redirect '/list_all'
   end
 
   # # Verify login details against database
