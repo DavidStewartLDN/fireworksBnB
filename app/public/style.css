@@ -1,0 +1,73 @@
+html { height: 100vh;
+    background: gainsboro;
+    overscroll-behavior: none;}
+
+#container {
+      font-family:  'Spartan', Georgia,  sans-serif;
+      width: 90%;
+      align-items: center;
+      margin: 1em auto;
+    }
+    
+header {
+    color: gainsboro;
+    height: 5em;
+    display: block;
+    text-align: center;
+    background-color:  rgb(163, 73, 73);
+    padding: 2em auto;
+    font-size: 1.8em;
+    box-shadow: 1px 1px 10px black;
+    text-shadow: 2px 2px 10px rgb(99, 89, 84);}
+    h1 {padding-top: 0.7em;font-family: Neucha; letter-spacing: 5px; font-size: 2.2em}
+    
+#content {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 6em auto;
+    height: 50vh;
+    }  
+    
+footer {height: 2em;
+  padding: 1em;
+  position: fixed;
+  display: inline; 
+  left: 50%;
+  transform:translateX(-50%);
+  bottom: 0;
+  width: 80vw;
+  border-top: 1px solid rgb(70, 72, 92);
+  letter-spacing: -1px;
+  color: rgb(70, 72, 92)
+}
+#f2 {float:right;}
+
+
+a > #button, a:visited {color: brown;
+    font-size: 1.2em; 
+    padding: 0.7em 0.4em; 
+    margin: 1em;  
+    text-decoration: none;
+    box-shadow: 1px 1px 8px rgb(70, 72, 92)
+}
+a, input {cursor: pointer !important;}
+input {font-family:  'Spartan', serif;
+    box-shadow: 1px 1px 8px rgb(70, 72, 92);
+    background-color: beige;
+    border: 1px dotted brown;
+    padding: 0.9em 0.5em;
+    margin: 0.5em;
+    font-size: 0.9em;}
+
+#button  { background-color: rgb(163, 73, 73); 
+        color: beige;
+    border: 1px dotted beige;     
+    padding: 0.9em 0.5em;
+    text-decoration: none;
+    margin: 0.5em;
+}
+#banner{
+    color: gainsboro;
+    text-decoration: none
+}
+    
