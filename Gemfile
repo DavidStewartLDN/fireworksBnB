@@ -7,6 +7,7 @@ gem 'sinatra-activerecord'
 gem 'sqlite3'
 gem 'rake'
 gem 'rack'
+gem 'selenium-webdriver'
 
 gem 'rspec'
 gem 'capybara'

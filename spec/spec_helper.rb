@@ -22,7 +22,7 @@ ActiveRecord::Base.establish_connection(connection_details[DB_ENV])
 
 RSpec.configure do |config|
   config.before(:each) do
-    ActiveRecord::Base.connection.execute('TRUNCATE users, spaces, bookings')
+    ActiveRecord::Base.connection.execute('DELETE FROM users; spaces; bookings;')
   end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
