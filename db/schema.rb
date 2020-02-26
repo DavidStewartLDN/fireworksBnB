@@ -16,12 +16,18 @@ ActiveRecord::Schema.define(version: 2020_02_24_155546) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.string "confirmation"
+    t.integer "space_id"
+    t.integer "user_id"
+    t.index ["space_id"], name: "index_bookings_on_space_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "spaces", force: :cascade do |t|
     t.string "property_name"
     t.text "description"
     t.integer "price"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_spaces_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -29,4 +35,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_155546) do
     t.string "password"
   end
 
+  add_foreign_key "bookings", "spaces"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "spaces", "users"
 end
