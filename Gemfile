@@ -7,7 +7,7 @@ gem 'sinatra-activerecord'
 gem 'sqlite3'
 gem 'rake'
 gem 'rack'
-
+gem 'bcrypt'
 gem 'rspec'
 gem 'capybara'
 gem 'rubocop'
