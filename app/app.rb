@@ -99,4 +99,12 @@ class FireworksBnB < Sinatra::Base
     erb :confirm_request
   end
 
+  get '/list_my_bookings' do
+    if Booking.exists?(user_id: session[:user_id])
+      @users_bookings = Booking.where(user_id: session[:user_id])
+      erb :list_my_bookings
+    else
+      erb :list_my_bookings_empty
+    end
+  end
 end
