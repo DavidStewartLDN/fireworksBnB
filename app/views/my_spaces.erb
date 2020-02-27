@@ -1,0 +1,9 @@
+<h1> My current listings </h1>
+<div>
+  <ul>
+    <% @my_spaces.each do |space| %>
+      <li>Property name: <%= space.property_name %>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -99,4 +99,10 @@ class FireworksBnB < Sinatra::Base
     erb :confirm_request
   end
 
+  get '/my_spaces' do
+    @my_spaces = Space.where(user_id: session[:user_id])
+    # @bookings_for_my_spaces = 
+    erb :my_spaces
+  end
+
 end
