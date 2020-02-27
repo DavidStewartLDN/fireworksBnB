@@ -98,6 +98,14 @@ class FireworksBnB < Sinatra::Base
     @current_space_bookings = Booking.where(user_id: session[:user_id], space_id: session[:space_id])
     erb :confirm_request
   end
+  
+  # shows user spaces - listing only property names at the moment
+  
+  get '/my_spaces' do
+    @my_spaces = Space.where(user_id: session[:user_id])
+    # @bookings_for_my_spaces = 
+    erb :my_spaces
+  end
 
   # can see bookings made 
 
