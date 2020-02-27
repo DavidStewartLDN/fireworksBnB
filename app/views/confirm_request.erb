@@ -7,10 +7,15 @@
   <div>
   <ul>
       <% @current_space_bookings.each do |booking| %>
-        <li>Start date: <%= booking.start_date %>, End date: <%= booking.end_date %>, Space id: <%= booking.space_id %>, Status: <%= booking.confirmation %>
+        <li>Start date: <% start = booking.start_date %>
+     <%= start.to_s.first(10) %>,
+     End date: <%endy =  booking.end_date %>
+     <%= endy.to_s.first(10) %>, Space id: <%= booking.space_id %>, Status: <%= booking.confirmation %>
         </li>
       <% end %>
     </ul>
+    <br>
+    <br>
     <a id="button" href="/homepage">Return to homepage</a> 
   </div>
 </body>
