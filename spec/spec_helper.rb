@@ -3,6 +3,7 @@ require "capybara/rspec"
 require "rspec"
 require "sinatra/activerecord"
 require_relative "../app/app"
+require 'web_helper.rb'
 
 ENV['RACK_ENV'] = 'test'
 ENV['ENVIRONMENT'] = 'test'
