@@ -103,7 +103,18 @@ class FireworksBnB < Sinatra::Base
 
   get '/list_my_bookings' do
     if Booking.exists?(user_id: session[:user_id])
+      # this is ugly but allows use of multiple tables for the erb - will refactor (promise)
       @users_bookings = Booking.where(user_id: session[:user_id])
+      @users_bookings.each do |booking|
+        @spacey =  booking.space_id
+        p "first"
+        p @spacey
+      end
+      p"second"
+      p @spacey
+      @properties = Space.where(id: @spacey)
+      p "third"
+      p @properties
       erb :list_my_bookings
     else
       erb :list_my_bookings_empty
