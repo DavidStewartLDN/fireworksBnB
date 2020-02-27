@@ -19,8 +19,6 @@ feature "user is able to book a space" do
     expect(page).to have_content("Your current bookings for this property are")
     expect(page).to have_content("2020-02-27")
     expect(page).to have_content("2020-02-28")
-
     # We need to create test to confirm that the page you are requesting booking for is for the correct space
-
   end
 end

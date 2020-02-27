@@ -1,6 +1,4 @@
-# MUST REQUIRE in SPEC HELPER
-# require "web_helpers.rb"
-# AND run function in every spec feature scenario
+# run function in spec scenarios as required
 
 def users_log_in_list_space_request_booking
   create_users
