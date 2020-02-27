@@ -73,6 +73,29 @@ class FireworksBnB < Sinatra::Base
   post '/add_space/new' do
     new_space = Space.create(property_name: params[:new_space_name], description: params[:new_space_description], price: params[:new_price], user_id: session[:user_id])
     redirect '/homepage'
-  end 
+  end
+
+  #  Save space id
+
+  post '/save_space_id/:id' do
+    session[:space_id] = params[:id]
+    redirect '/request_booking'
+  end
+
+  get '/request_booking' do
+    erb :request_booking
+  end
+
+  post '/save_booking' do
+    params[:start_date]
+    params[:end_date]
+    session[:space_id]
+    Booking.create(start_date: params[:start_date], end_date: params[:end_date], confirmation: "Pending", space_id: session[:space_id], user_id: session[:user_id])
+    redirect '/confirm_request'
+  end
+
+  get '/confirm_request' do
+    erb :confirm_request
+  end
 
 end

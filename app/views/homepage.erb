@@ -5,7 +5,11 @@
     <h1> Space feed! </h1>
     <ul>
       <% @spaces.each do |space| %>
-        <li>Property name: <%= space.property_name %> Description: <%= space.description %> Price: <%= space.price %> </li>
+        <li>Property name: <%= space.property_name %> Description: <%= space.description %> Price: <%= space.price %> 
+        <form action="/save_space_id/<%= space.id %>" method="post">
+          <input type="submit" value="Book <%= space.property_name %>">
+        </form>
+        </li>
       <% end %>
     </ul>
   </div>
