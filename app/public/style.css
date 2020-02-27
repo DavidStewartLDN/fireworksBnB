@@ -1,12 +1,12 @@
 html { height: 100vh;
-    background: gainsboro;
-    overscroll-behavior: none;}
-
+    background: gainsboro;}
+body {  overscroll-behavior: none; }
 #container {
       font-family:  'Spartan', Georgia,  sans-serif;
       width: 90%;
       align-items: center;
-      margin: 1em auto;
+      margin: auto;
+      margin-top: 0.2em;
     }
     
 header {
@@ -19,29 +19,30 @@ header {
     font-size: 1.8em;
     box-shadow: 1px 1px 10px black;
     text-shadow: 2px 2px 10px rgb(99, 89, 84);}
-    h1 {padding-top: 0.7em;font-family: Neucha; letter-spacing: 5px; font-size: 2.2em}
+    header > h1 {padding-top: 0.7em;font-family: Neucha; letter-spacing: 5px; font-size: 2.2em}
     
 #content {
     text-align: center;
     font-size: 1.2em;
-    margin: 6em auto;
-    height: 50vh;
+    margin: auto;
+    height: 70vh;
+    overflow: scroll;
     }  
-    
+    h1 { font-family: Neucha;letter-spacing: 3px;}
 footer {height: 2em;
   padding: 1em;
   position: fixed;
-  display: inline; 
+  display:  block; 
   left: 50%;
   transform:translateX(-50%);
   bottom: 0;
   width: 80vw;
   border-top: 1px solid rgb(70, 72, 92);
   letter-spacing: -1px;
-  color: rgb(70, 72, 92)
+  color: rgb(70, 72, 92);
+  background-color:gainsboro;
 }
 #f2 {float:right;}
-
 
 a > #button, a:visited {color: brown;
     font-size: 1.2em; 
@@ -71,3 +72,4 @@ input {font-family:  'Spartan', serif;
     text-decoration: none
 }
     
+ul { list-style: none; margin: 20px; } 
