@@ -72,15 +72,18 @@ feature 'user is able to book a space' do
     
     click_button('Book Lovely old house')
 
-    fill_in 'start_date', with: '27/02/20'
-    fill_in 'end_date', with: '28/02/20'
+    fill_in 'start_date', with: '27/02/2020'
+    fill_in 'end_date', with: '28/02/2020'
     click_button('Request Dates')
 
     expect(page).to have_content('Request sent')
-    # expect(page).to have_content('27/02/20')
-    # expect(page).to have_content('28/02/20')
+    expect(page).to have_content('Your current bookings for this property are')
+    expect(page).to have_content('2020-02-27')
+    expect(page).to have_content('2020-02-28')
 
     # We need to create test to confirm that the page you are requesting booking for is for the correct space
 
   end
+
+  
 end

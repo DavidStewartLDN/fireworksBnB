@@ -95,6 +95,7 @@ class FireworksBnB < Sinatra::Base
   end
 
   get '/confirm_request' do
+    @current_space_bookings = Booking.where(user_id: session[:user_id], space_id: session[:space_id])
     erb :confirm_request
   end
 
