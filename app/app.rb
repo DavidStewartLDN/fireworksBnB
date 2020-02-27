@@ -71,7 +71,7 @@ class FireworksBnB < Sinatra::Base
   end
 
   post '/add_space/new' do
-    new_space = Space.create(property_name: params[:new_space_name], description: params[:new_space_description], price: params[:new_price])
+    new_space = Space.create(property_name: params[:new_space_name], description: params[:new_space_description], price: params[:new_price], user_id: session[:user_id])
     redirect '/homepage'
   end 
 
