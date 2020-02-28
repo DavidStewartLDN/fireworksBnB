@@ -9,14 +9,14 @@ def users_log_in_list_space_request_booking
 end
 
 def create_users
-  User.create(username: "Owner", password: "potato")
-  User.create(username: "Traveller", password: "potato")
+  User.create(username: "owner@owner.com", password: "potato")
+  User.create(username: "Traveller@traveller.com", password: "potato")
 end
 
 def owner_login
   visit("/")
   click_link("Log in")
-  fill_in "username", with: "Owner"
+  fill_in "username", with: "owner@owner.com"
   fill_in "password", with: "potato"
   click_button("Log in")
 end
@@ -32,7 +32,7 @@ end
 def traveller_login
   visit("/")
   click_link("Log in")
-  fill_in "username", with: "Traveller"
+  fill_in "username", with: "Traveller@traveller.com"
   fill_in "password", with: "potato"
   click_button("Log in")
 end

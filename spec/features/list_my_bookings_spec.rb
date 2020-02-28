@@ -1,12 +1,12 @@
 feature 'shows traveller all their bookings' do
   scenario 'traveller has no bookings' do 
 
-    User.create(username: 'Owner', password: 'potato')
-    User.create(username: 'Traveller', password: 'potato')
+    User.create(username: 'owner@owner.com', password: 'potato')
+    User.create(username: 'Traveller@traveller.com', password: 'potato')
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Traveller'
+    fill_in 'username', with: 'Traveller@traveller.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
     click_link('Show my bookings')
@@ -15,13 +15,13 @@ feature 'shows traveller all their bookings' do
   end  
   scenario 'traveller has a booking' do 
 
-    User.create(username: 'Owner', password: 'potato')
-    User.create(username: 'Traveller', password: 'potato')
+    User.create(username: 'owner@owner.com', password: 'potato')
+    User.create(username: 'Traveller@traveller.com', password: 'potato')
     # Log in to user Owner
     
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Owner'
+    fill_in 'username', with: 'owner@owner.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
@@ -37,7 +37,7 @@ feature 'shows traveller all their bookings' do
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Traveller'
+    fill_in 'username', with: 'Traveller@traveller.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
     click_button('Book Lovely old house')
