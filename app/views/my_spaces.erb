@@ -2,8 +2,14 @@
 <div>
   <ul>
     <% @my_spaces.each do |space| %>
-      <li>Property name: <%= space.property_name %>
-      </li>
-    <% end %>
+    <h2> Space: <%=space.property_name%> </h2>
+      <% space.bookings.each do |booking| %>
+        <div>
+          <p>From: <%=booking.start_date%> </p>
+          <p>To: <%=booking.end_date%> </p>
+          <p>Approval Status: <%=booking.confirmation%> </p>
+        </div>
+      <% end %>
+  <% end %>
   </ul>
 </div>
