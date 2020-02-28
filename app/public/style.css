@@ -1,75 +1,131 @@
-html { height: 100vh;
-    background: gainsboro;}
-body {  overscroll-behavior: none; }
+html {
+    min-height: 100%;
+    overflow-y: scroll;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overscroll-behavior: none;
+}
+
 #container {
-      font-family:  'Spartan', Georgia,  sans-serif;
-      width: 90%;
-      align-items: center;
-      margin: auto;
-      margin-top: 0.2em;
-    }
-    
+    font-family: 'Spartan', Georgia, sans-serif;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    margin-top: 0.2em;
+}
+
 header {
     color: gainsboro;
     height: 5em;
     display: block;
     text-align: center;
-    background-color:  rgb(163, 73, 73);
+    background-color: rgb(133, 54, 54);
     padding: 2em auto;
     font-size: 1.8em;
     box-shadow: 1px 1px 10px black;
-    text-shadow: 2px 2px 10px rgb(99, 89, 84);}
-    header > h1 {padding-top: 0.7em;font-family: Neucha; letter-spacing: 5px; font-size: 2.2em}
-    
+    text-shadow: 2px 2px 10px rgb(99, 89, 84);
+}
+
+header > h1 {
+    padding-top: 0.7em;
+    font-family: Neucha;
+    letter-spacing: 5px;
+    font-size: 2.2em
+}
+
 #content {
     text-align: center;
     font-size: 1.2em;
     margin: auto;
-    height: 70vh;
+    height: 65vh;
     overflow: scroll;
-    }  
-    h1 { font-family: Neucha;letter-spacing: 3px;}
-footer {height: 2em;
-  padding: 1em;
-  position: fixed;
-  display:  block; 
-  left: 50%;
-  transform:translateX(-50%);
-  bottom: 0;
-  width: 80vw;
-  border-top: 1px solid rgb(70, 72, 92);
-  letter-spacing: -1px;
-  color: rgb(70, 72, 92);
-  background-color:gainsboro;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
 }
-#f2 {float:right;}
 
-a > #button, a:visited {color: brown;
-    font-size: 1.2em; 
-    padding: 0.7em 0.4em; 
-    margin: 1em;  
+h1 {
+    font-family: Neucha;
+    letter-spacing: 3px;
+}
+
+footer {
+    text-align: left;
+    height: 1em;
+    padding: 1em;
+    position: fixed;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80vw;
+    border-top: 1px solid rgb(70, 72, 92);
+    letter-spacing: -1px;
+    color: gainsboro;
+    text-shadow: 1px 1px 6px rgb(68, 44, 44);
+    letter-spacing: 1px;
+}
+
+#f2 {
+    float: right;
+}
+
+a > #button,
+a:visited {
+    color: brown;
+    font-size: 1.2em;
+    padding: 0.7em 0.4em;
+    margin: 1em;
     text-decoration: none;
     box-shadow: 1px 1px 8px rgb(70, 72, 92)
 }
-a, input {cursor: pointer !important;}
-input {font-family:  'Spartan', serif;
+
+a,
+input {
+    cursor: pointer !important;
+}
+
+input {
+    font-family: 'Spartan', serif;
     box-shadow: 1px 1px 8px rgb(70, 72, 92);
     background-color: beige;
     border: 1px dotted brown;
     padding: 0.9em 0.5em;
     margin: 0.5em;
-    font-size: 0.9em;}
+    font-size: 0.9em;
+}
 
-#button  { background-color: rgb(163, 73, 73); 
-        color: beige;
-    border: 1px dotted beige;     
+#button {
+    background-color: rgb(163, 73, 73);
+    color: beige;
+    border: 1px dotted beige;
     padding: 0.9em 0.5em;
     text-decoration: none;
     margin: 0.5em;
 }
-#banner{
+
+#banner {
     color: gainsboro;
     text-decoration: none
 }
-    
-ul { list-style: none; margin: 20px; } 
+
+ul {
+    list-style: none;
+    margin: 20px;
+}
+
+footer > a,
+footer > a:visited,
+#f2 > a,
+#f2 > a:visited {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: whitesmoke !important
+}
+
+footer > a:hover,
+#f2 > a:hover {
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
