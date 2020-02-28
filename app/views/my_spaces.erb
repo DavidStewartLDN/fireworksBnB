@@ -1,18 +1,36 @@
 <h1> My current listings </h1>
 <div>
+  <h1> Requested Bookings </h1>
   <ul>
     <% @my_spaces.each do |space| %>
     <h2> Space: <%=space.property_name%> </h2>
-      <% space.bookings.each do |booking| %>
+      <% space.bookings.where(confirmation: "Pending").each do |booking| %>
         <div>
           <p>From: <%=booking.start_date.to_s.first(10)%> </p>
           <p>To: <%=booking.end_date.to_s.first(10)%>  </p>
           <p>Approval Status: <%=booking.confirmation%> </p>
           <form action="/update_booking_status/<%= booking.id %>" method="post">
-            <input id="button" type="submit" value="Confirm">
+            <input id="button" name="confirmed" type="submit" value="Confirm">
+            <input id="button" name="cancelled" type="submit" value="Cancel">
           </form>
+          <p> ---------------------------------- </p>
         </div>
       <% end %>
   <% end %>
   </ul>
+  <h1> Confirmed Bookings </h1>
+  <ul>
+    <% @my_spaces.each do |space| %>
+    <h2> Space: <%=space.property_name%> </h2>
+      <% space.bookings.where(confirmation: "Confirmed").each do |booking| %>
+        <div>
+          <p>From: <%=booking.start_date.to_s.first(10)%> </p>
+          <p>To: <%=booking.end_date.to_s.first(10)%>  </p>
+          <p>Approval Status: <%=booking.confirmation%> </p>
+          <p> ---------------------------------- </p>
+        </div>
+      <% end %>
+  <% end %>
+  </ul>
+  <a id="button" href="/homepage">Return to homepage</a> 
 </div>
