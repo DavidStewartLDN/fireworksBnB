@@ -1,13 +1,13 @@
 feature 'user is able to see their spaces' do
   scenario 'user can be redirected correctly to see their spaces' do
 
-    User.create(username: 'Owner', password: 'potato')
+    User.create(username: 'owner@owner.com', password: 'potato')
 
     # Log in to user Owner
     
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Owner'
+    fill_in 'username', with: 'owner@owner.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
@@ -19,14 +19,14 @@ feature 'user is able to see their spaces' do
 
   scenario 'user can see current pending requests for their property with dates' do
 
-    User.create(username: 'Owner', password: 'potato')
-    User.create(username: 'Traveller', password: 'potato')
+    User.create(username: 'owner@owner.com', password: 'potato')
+    User.create(username: 'Traveller@traveller.com', password: 'potato')
     
     # Owner logs in
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Owner'
+    fill_in 'username', with: 'owner@owner.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
@@ -42,7 +42,7 @@ feature 'user is able to see their spaces' do
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Traveller'
+    fill_in 'username', with: 'Traveller@traveller.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
@@ -56,7 +56,7 @@ feature 'user is able to see their spaces' do
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Owner'
+    fill_in 'username', with: 'owner@owner.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
@@ -72,14 +72,14 @@ feature 'user is able to see their spaces' do
 
   scenario 'user can see current pending requests, press button to confirm request and see as confirmed' do
 
-    User.create(username: 'Owner', password: 'potato')
-    User.create(username: 'Traveller', password: 'potato')
+    User.create(username: 'owner@owner.com', password: 'potato')
+    User.create(username: 'Traveller@traveller.com', password: 'potato')
     
     # Owner logs in
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Owner'
+    fill_in 'username', with: 'owner@owner.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
@@ -95,7 +95,7 @@ feature 'user is able to see their spaces' do
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Traveller'
+    fill_in 'username', with: 'Traveller@traveller.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
@@ -109,7 +109,7 @@ feature 'user is able to see their spaces' do
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Owner'
+    fill_in 'username', with: 'owner@owner.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
@@ -127,14 +127,14 @@ feature 'user is able to see their spaces' do
 
   scenario 'user can see current pending requests, press button to confirm request and expect not to see booking' do
 
-    User.create(username: 'Owner', password: 'potato')
-    User.create(username: 'Traveller', password: 'potato')
+    User.create(username: 'owner@owner.com', password: 'potato')
+    User.create(username: 'Traveller@traveller.com', password: 'potato')
     
     # Owner logs in
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Owner'
+    fill_in 'username', with: 'owner@owner.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
@@ -150,7 +150,7 @@ feature 'user is able to see their spaces' do
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Traveller'
+    fill_in 'username', with: 'Traveller@traveller.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
@@ -164,7 +164,7 @@ feature 'user is able to see their spaces' do
 
     visit('/')
     click_link('Log in')
-    fill_in 'username', with: 'Owner'
+    fill_in 'username', with: 'owner@owner.com'
     fill_in 'password', with: 'potato'
     click_button('Log in')
 
