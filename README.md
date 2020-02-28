@@ -26,14 +26,17 @@ more functionality to implement
 - Ruby with Sinatra 
 - HTML markup & CSS styling
 
-#### What it looks like
-
-<img src="fireworksbnb.png" width="700">
 
 #### How to Run
- 
 
+- Fork this repo
+- Clone this repo
+- Run command `rackup` in your terminal 
+- Open `localhost:9292` in Chrome
+ 
 #### How to Test
+
+- Run command `rspec` in your terminal  
 
 #### Key Learnings
 
