@@ -5,9 +5,12 @@
     <h2> Space: <%=space.property_name%> </h2>
       <% space.bookings.each do |booking| %>
         <div>
-          <p>From: <%=booking.start_date%> </p>
-          <p>To: <%=booking.end_date%> </p>
+          <p>From: <%=booking.start_date.to_s.first(10)%> </p>
+          <p>To: <%=booking.end_date.to_s.first(10)%>  </p>
           <p>Approval Status: <%=booking.confirmation%> </p>
+          <form action="/update_booking_status/<%= booking.id %>" method="post">
+            <input id="button" type="submit" value="Confirm">
+          </form>
         </div>
       <% end %>
   <% end %>

@@ -106,6 +106,11 @@ class FireworksBnB < Sinatra::Base
     erb :my_spaces
   end
 
+  post '/update_booking_status/:id' do
+    Booking.find(params[:id]).update(confirmation: "Confirmed")
+    redirect '/my_spaces'
+  end
+
   # can see bookings made 
 
   get '/list_my_bookings' do
