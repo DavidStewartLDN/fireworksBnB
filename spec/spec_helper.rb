@@ -3,12 +3,11 @@ require "capybara/rspec"
 require "rspec"
 require "sinatra/activerecord"
 require_relative "../app/app"
-
-ENV['RACK_ENV'] = 'test'
-ENV['ENVIRONMENT'] = 'test'
-
+require "web_helper.rb"
 
 # ENV["ENVIRONMENT"] = "test"
+ENV['RACK_ENV'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
 
 Capybara.app = FireworksBnB
 
@@ -18,7 +17,6 @@ Capybara.server = :webrick
 DB_ENV ||='test'
 connection_details =YAML::load(File.open('./config/database.yml'))
 ActiveRecord::Base.establish_connection(connection_details[DB_ENV])
-
 
 RSpec.configure do |config|
   config.before(:each) do
