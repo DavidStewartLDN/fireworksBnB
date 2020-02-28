@@ -4,15 +4,31 @@ This is an AirBnB clone, created as a group project for Week 6 of the Makers Aca
 
 #### Collaborators
 
-Team Firework: [Hansa](https://github.com/hansa-lallu), [Myrtle](https://github.com/Mrtly), [David](https://github.com/DavidStewartLD) and [Emily](https://github.com/EWright212)
+Team Fireworks: [Hansa](https://github.com/hansa-lallu), [Myrtle](https://github.com/Mrtly), [David](https://github.com/DavidStewartLD) and [Emily](https://github.com/EWright212)
 
-#### Specification
+#### Specification & capabilities
+A user can: 
+- [x] sign up and log in
+- [x] list multiple spaces
+- [x] name their space, provide a short description of the space, and a price per night
+- [x] see spaces available for booking
+- [x] request to hire any space for one night
+- [x] approve or reject requests made by other users
+- [x] see that the status of their request (pending, approved, or rejected)
 
-Our Firework BnB is created in Ruby with the following tech:
+more functionality to implement
+- [ ] host can offer a range of available dates 
+- [ ] nights for which a space has already been booked should not be available for users to book that space
+- [ ] until a user has confirmed a booking request, that space can still be booked for that night
+
+#### Tech used
 - Active Record for Database Management
-- Sinatra and Heroku for web hosting
-- Travis and git for version control
-- Javascript for web views
+- Ruby with Sinatra 
+- HTML markup & CSS styling
+
+#### What it looks like
+
+<img src="fireworksbnb.png" width="700">
 
 #### How to Run
 
@@ -24,4 +40,4 @@ We took an agile approach to our learning with daily standups, sprint planning s
 
 Our website was mocked using figma, shown below. We created different versions for each sprint to keep track of which features we were working on next.
 
-<img src="wireframe.png" width="500">
+<img src="wireframe.png" width="700">
