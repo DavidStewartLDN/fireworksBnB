@@ -31,9 +31,15 @@ more functionality to implement
 <img src="fireworksbnb.png" width="700">
 
 #### How to Run
- 
 
+- Fork this repo
+- Clone this repo
+- Run command `rackup` in your terminal 
+- Open `localhost:9292` in Chrome
+ 
 #### How to Test
+
+- Run command `rspec` in your terminal  
 
 #### Key Learnings
 
