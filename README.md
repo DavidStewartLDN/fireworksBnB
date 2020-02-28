@@ -26,6 +26,9 @@ more functionality to implement
 - Ruby with Sinatra 
 - HTML markup & CSS styling
 
+#### What it looks like
+
+<img src="fireworksbnb.png" width="700">
 
 #### How to Run
 
