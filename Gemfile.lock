@@ -41,6 +41,7 @@ GEM
     parallel (1.19.1)
     parser (2.7.0.2)
       ast (~> 2.4.0)
+    pg (1.2.3)
     public_suffix (4.0.3)
     rack (2.2.2)
     rack-protection (2.0.8.1)
@@ -94,7 +95,6 @@ GEM
     sinatra-activerecord (2.0.14)
       activerecord (>= 3.2)
       sinatra (>= 1.0)
-    sqlite3 (1.4.2)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
@@ -112,6 +112,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   capybara
+  pg
   rack
   rake
   rspec
@@ -120,7 +121,6 @@ DEPENDENCIES
   simplecov
   simplecov-console
   sinatra-activerecord
-  sqlite3
 
 BUNDLED WITH
    2.1.4
