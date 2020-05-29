@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 gem 'activerecord'
 gem 'sinatra-activerecord'
-gem 'sqlite3'
+gem 'pg'
 gem 'rake'
 gem 'rack'
 gem 'selenium-webdriver'

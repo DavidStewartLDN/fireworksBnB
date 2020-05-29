@@ -1,12 +1,12 @@
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   encoding: unicode
   pool: 2
 
 development:
   <<: *default
-  database: db/fireworksbnb.sqlite3
+  database: fireworksbnb_development
 
 test:
   <<: *default
-  database: db/fireworksbnb_test.sqlite3
+  database: fireworksbnb_test

@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2020_02_24_155546) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bookings", force: :cascade do |t|
     t.datetime "start_date"
     t.datetime "end_date"
     t.string "confirmation"
-    t.integer "space_id"
-    t.integer "user_id"
+    t.bigint "space_id"
+    t.bigint "user_id"
     t.index ["space_id"], name: "index_bookings_on_space_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -26,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_155546) do
     t.string "property_name"
     t.text "description"
     t.integer "price"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_spaces_on_user_id"
   end
 
