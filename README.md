@@ -1,6 +1,6 @@
 ### Fireworks BnB
 
-This is an AirBnB clone, created as a group project for Week 6 of the Makers Academy Course.
+This is an AirBnB clone, created as a group project for Week 6 of the Makers Academy Course. The app is currently deployed on [Heroku](https://fireworksbnb.herokuapp.com/).
 
 #### Collaborators
 
